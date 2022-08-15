@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment-blue
+  labels:
+    app: myapp-deployment-blue
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        version: blue
+    spec:
+      containers:
+        - name: myapp-container
+          image: hitanshu91/sample-application-blue-version:v1
+  replicas: 1
+  selector:
+    matchLabels:
+      version: blue
+      app: myapp
