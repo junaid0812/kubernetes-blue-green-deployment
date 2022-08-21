@@ -10,4 +10,4 @@ spec:
    nodePort: 30081
  selector:
   app: myapp # any custom name
-  version: green
+  version: blue
