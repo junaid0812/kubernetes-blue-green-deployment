@@ -40,8 +40,8 @@ pipeline {
                 sh "sudo mv ./kubectl /usr/local/bin/kubectl"
                 sh "aws eks --region ap-south-1 update-kubeconfig --name gohash"
                 sh "kubectl get po"
-                sh ('kubectl apply -f kubernetes-YAML/blue-deployment.yaml')
-                sh ('kubectl apply -f kubernetes-YAML/blue-service.yaml')
+                sh ('kubectl apply -f kubernetes-YAML/green-deployment.yaml')
+                sh ('kubectl apply -f kubernetes-YAML/green-service.yaml')
                   
           } }
         } 
